@@ -1,20 +1,16 @@
-import { GAME_BUNDLES } from '@/data/game-bundles'
-import { GameBundleRow } from '@/types/game-bundle-row'
 import { createFileRoute } from '@tanstack/react-router'
-import { columns } from './-columns'
-import { DataTable } from './-data-table'
 
-function getBundleRows(): GameBundleRow[] {
-  return GAME_BUNDLES.flatMap((bundle) =>
-    bundle.bundles.map((sub) => ({
-      id: bundle.id,
-      name: bundle.name,
-      price: sub.price,
-      items: sub.items,
-      totalGemValue: sub.totalGemValue,
-    }))
-  )
-}
+// function getBundleRows(): GameBundleRow[] {
+//   return GAME_BUNDLES.flatMap((bundle) =>
+//     bundle.bundles.map((sub) => ({
+//       id: bundle.id,
+//       name: bundle.name,
+//       price: sub.price,
+//       items: sub.items,
+//       totalGemValue: sub.totalGemValue,
+//     }))
+//   )
+// }
 
 export const Route = createFileRoute('/economy/bundles/')({
   component: RouteComponent,
@@ -31,9 +27,7 @@ function RouteComponent() {
         the calculation of the gem value per dollar column.
       </div>
 
-      <div>
-        <DataTable columns={columns} data={getBundleRows()} />
-      </div>
+      <div>{/* <DataTable columns={columns} data={getBundleRows()} /> */}</div>
     </div>
   )
 }

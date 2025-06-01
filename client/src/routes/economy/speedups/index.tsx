@@ -17,8 +17,7 @@ import {
 import { createFileRoute } from '@tanstack/react-router'
 import { ChevronDownIcon } from 'lucide-react'
 import { useMemo, useState } from 'react'
-import { columns } from './-columns'
-import { DataTable } from './-data-table'
+// import { columns } from './-columns'
 
 export const Route = createFileRoute('/economy/speedups/')({
   component: RouteComponent,
@@ -121,7 +120,7 @@ function RouteComponent() {
       </div>
 
       <div className="py-2">
-        <DataTable columns={columns} data={filtered} />
+        {/* <DataTable columns={columns} data={filtered} /> */}
       </div>
     </div>
   )
