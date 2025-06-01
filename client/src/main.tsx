@@ -5,7 +5,10 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { RouterProvider, createRouter } from '@tanstack/react-router'
 import ReactDOM from 'react-dom/client'
 
-const router = createRouter({ routeTree })
+const router = createRouter({
+  routeTree,
+  basepath: '/cod-zone',
+})
 const queryClient = new QueryClient()
 
 declare module '@tanstack/react-router' {
